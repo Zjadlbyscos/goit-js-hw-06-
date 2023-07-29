@@ -23,10 +23,17 @@ const galleryImg = images.map(image => `
 `).join('');
 
 
-// Wstawiamy utworzony kod HTML do listy galerii dzięki .insertAdjacentHTML
+// Wstawiamy utworzony kod HTML do listy galerii
 galleryList.insertAdjacentHTML('afterend', galleryImg);
 
-// nadajemy style 
+
 galleryList.style.display = 'flex';
-galleryList.style.gap = '30px';
-galleryList.style.justifyContent = 'center';
+        galleryList.style.gap = '30px';
+        galleryList.style.justifyContent = 'center';
+
+
+        const galleryImages = galleryList.querySelectorAll('img');
+        galleryImages.forEach(img => {
+            img.style.width = "50vw";
+            img.style.height = "auto";
+})
