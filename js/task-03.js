@@ -25,16 +25,19 @@ const galleryImg = images
 `
   )
   .join("");
-
+  
 // Wstawiamy utworzony kod HTML do listy galerii
 galleryList.insertAdjacentHTML("afterend", galleryImg);
 
-galleryList.style.display = "flex";
-galleryList.style.gap = "30px";
-galleryList.style.justifyContent = "center";
 
-const galleryImages = galleryList.querySelectorAll("img");
-galleryImages.forEach((img) => {
-  img.style.width = "50vw";
-  img.style.height = "auto";
+const galleryImages = document.querySelectorAll("img");
+galleryImages.forEach((e) => {
+  e.style.width = "40vw";
+  e.style.height = "auto";
 });
+
+// galleryList.style.display = "flex";
+// galleryList.style.gap = "30px";
+// galleryList.style.justifyContent = "center";
+
+
