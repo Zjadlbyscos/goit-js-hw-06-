@@ -8,7 +8,7 @@ function selectColor(event) {
   if (event.target.nodeName !== "BUTTON") {
     return;
   }
-
+  // Pamiętaj, aby sprawdzić cel kliknięcia, żeby zdecydowanie był to przycisk, nie chcemy przetwarzać kliknięć w element kontenera. Aby sprawdzić typ elementu, użyj właściwości nodeName.
   const selectedColor = event.target.dataset.color;
   output.textContent = `Selected color: ${selectedColor}`;
   output.style.color = selectedColor;
